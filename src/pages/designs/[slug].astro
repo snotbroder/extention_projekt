@@ -1,0 +1,270 @@
+---
+import "../../styles/generel.css";
+import MainLayout from "../../layouts/MainLayout.astro";
+export async function getStaticPaths() {
+  const data = await fetch("https://plcpwtguguiponmaikkt.supabase.co/rest/v1/kongshaugTable1", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsY3B3dGd1Z3VpcG9ubWFpa2t0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU3ODMzNDMsImV4cCI6MjAzMTM1OTM0M30.F0THFO_2BDe8j-ZXrXcyfbczErZtlQ4nCo_MDcCMEVM",
+    },
+  }).then((response) => response.json());
+
+  return data.map((vaerk) => {
+    return {
+      params: { slug: vaerk.slug },
+      props: { myData: vaerk },
+    };
+  });
+}
+const { myData } = Astro.props;
+console.log(myData);
+---
+
+<MainLayout sitetitle={myData.title}>
+  <div class="breadcrumbcontainer">
+    <p class="breadcrumb"><a class="hyperlink" href="/">Home</a> <img src="/breadcrumb_arrow.svg" alt="breadcrumbarrow" /> <a class="hyperlink" href=`/designs?type=${myData.type}`>{myData.type} Designs</a> <img src="/breadcrumb_arrow.svg" alt="breadcrumbarrow" /> <span class="placeholder">{myData.title}</span></p>
+  </div>
+  <div class="herowrapper" id="no-margin">
+    <div class="topleft">
+      <span id="go-back" class="backbuttoncontainer">
+        <img class="arrow" src="/arrowleft.svg" alt="arrow" />
+        <h3>back</h3>
+      </span>
+    </div>
+    <img class="heroimage" src={myData.image} alt={myData.image_text} />
+    <div class="herocontainer">
+      <h1 class="displaytext">{myData.title}</h1>
+      <h3>{myData.customer}, {myData.year}</h3>
+    </div>
+  </div>
+  <div class="beskrivelse">
+    <div class="data_description">
+      <p>{myData.description1}</p>
+      <p>{myData.description2}</p>
+      <a href={myData.cta_link} target="_blank" class="hyperlink">{myData.linkTitle}&#x2197;</a>
+    </div>
+
+    <hr class="line" />
+    <div>
+      <img class="lightimage" src={myData.image1} alt={myData.image1_text} />
+    </div>
+  </div>
+  <div class="undergalleri">
+    <div>
+      <img class="lightimage" src={myData.image2} alt={myData.image2_text} />
+    </div>
+    <div>
+      <img class="lightimage" src={myData.image3} alt={myData.image3_text} />
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="flex">
+    <a class="flexcontainer" href=""><img class="arrow" src="/arrowleft.svg" alt="arrow" /><h3>previous</h3></a>
+    <a class="flexcontainer" href=""><h3>next</h3><img class="arrow" src="/arrowright.svg" alt="arrow" /></a>
+  </div>
+  <hr class="flexbottom" />
+</MainLayout>
+
+<style>
+  main {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flexcontainer {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+  }
+
+  .flexcontainer {
+    text-decoration: none;
+  }
+  .flexbottom {
+    margin-bottom: 2rem;
+  }
+  .flexcontainer img {
+    width: 1rem;
+    height: auto;
+  }
+  .beskrivelse {
+    display: grid;
+    margin-bottom: 0.5rem;
+  }
+  .undergalleri {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .data_description {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .line {
+    margin-bottom: 2rem;
+    width: 50%;
+  }
+  .herowrapper {
+    display: grid;
+    margin-left: 0;
+    height: 30rem;
+    overflow: hidden;
+  }
+  .herowrapper img {
+    object-fit: cover;
+    height: 30rem;
+    filter: brightness(0.8);
+  }
+  .heroimage,
+  .herocontainer,
+  .topleft,
+  img {
+    grid-area: 1/1;
+  }
+  .heroimage {
+    position: absolute;
+    left: 0;
+  }
+
+  .herocontainer {
+    z-index: 10;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .herocontainer h1 {
+    text-align: right;
+
+    margin-bottom: 2rem;
+    word-break: break-all;
+  }
+  .heroimage {
+    width: 100%;
+    border-bottom: 2px var(--body-contrast) solid;
+  }
+  .herocontainer h3 {
+    text-align: right;
+    margin-top: auto;
+  }
+  .topleft {
+    margin-top: 3rem;
+    z-index: 10;
+
+    max-height: 20%;
+  }
+  .topleft .backbuttoncontainer {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    max-width: 10rem;
+  }
+  .backbuttoncontainer:hover {
+    cursor: pointer;
+  }
+
+  .topleft .arrow {
+    width: 1rem;
+    height: auto;
+
+    transition: var(--unfocus);
+  }
+  span {
+    display: flex;
+    justify-content: start;
+    gap: 0.5rem;
+  }
+
+  .breadcrumbcontainer {
+    position: sticky;
+    top: 0%;
+    z-index: 100;
+    height: 0rem;
+  }
+  .breadcrumb {
+    display: flex;
+    justify-content: start;
+    gap: 0.5rem;
+  }
+  .breadcrumb {
+    max-width: fit-content;
+    border: solid var(--body-contrast) 1px;
+    border-top: none;
+    padding: 1rem;
+    background: var(--footer-gradient);
+  }
+  .breadcrumb a,
+  span,
+  img {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .breadcrumb img {
+    width: 3%;
+  }
+
+  .herowrapper p {
+    z-index: 6;
+  }
+
+  span:hover .arrow {
+    transform: translate(-1rem, 0px);
+    transition: var(--focus);
+  }
+  .backbuttoncontainer h3 {
+    transition: var(--unfocus);
+  }
+  .backbuttoncontainer:hover h3 {
+    color: var(--secondary);
+    transition: var(--focus);
+  }
+  .lightimage {
+    border-radius: 2px;
+  }
+
+  @media (min-width: 900px) {
+    .line {
+      width: 0;
+      margin-left: 2rem;
+      margin-bottom: auto;
+      order: 2;
+      height: 90%;
+      margin-top: auto;
+      border: 1.5px var(--body-contrast) solid;
+    }
+    .data_description {
+      order: 3;
+      align-content: center;
+    }
+    .beskrivelse {
+      display: grid;
+      grid-template-columns: 2fr 0.2fr 1fr;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .beskrivelse img {
+      order: 1;
+    }
+    .topleft .arrow {
+      width: 1.5rem;
+    }
+    .undergalleri {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+</style>
+
+<script>
+  document.getElementById("go-back").addEventListener("click", () => {
+    history.back();
+  });
+</script>

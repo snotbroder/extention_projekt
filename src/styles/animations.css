@@ -1,0 +1,54 @@
+@keyframes gradientanim_kf {
+  0% {
+    background-image: url(/gradient1_1000_605.avif);
+  }
+
+  20% {
+    background-image: url(/gradient4_1000_603.avif);
+  }
+
+  50% {
+    background-image: url(/gradient2_1000_605.avif);
+  }
+
+  70% {
+    background-image: url(/gradient3_1000_605.avif);
+  }
+  100% {
+    background-image: url(gradient1_1000_605.avif);
+  }
+}
+
+.gradientanim {
+  animation-name: gradientanim_kf;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+.borderanim {
+  animation: border_anim 0.3s ease-in-out forwards;
+}
+@keyframes border_anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.transanim {
+  animation-name: transanim_kf;
+  animation-duration: 1s;
+}
+
+@keyframes transanim_kf {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,169 @@
+/* ------ css reset ------ */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* COLORS */
+html {
+  scroll-behavior: smooth;
+
+  --primary: #c6ccff;
+  --primary-50: rgb(198, 204, 255, 50%);
+  --primary-35: rgb(198, 204, 255, 35%);
+
+  --secondary: #91da94;
+  --secondary-50: rgb(145, 218, 148, 50%);
+  --secondary-35: rgb(145, 218, 148, 35%);
+
+  --accent1: #16218c;
+  --body-contrast: #ececec;
+  --brandbackground: #0f1136;
+
+  --header-gradient: linear-gradient(
+    30deg,
+    rgba(15, 17, 54, 1) 0%,
+    rgba(15, 17, 54, 1) 35%,
+    rgba(22, 33, 140, 1) 100%
+  );
+  --footer-gradient: linear-gradient(
+    199deg,
+    rgba(15, 17, 54, 1) 0%,
+    rgba(15, 17, 54, 1) 35%,
+    rgba(22, 33, 140, 1) 100%
+  );
+  background-color: var(--brandbackground);
+
+  --focus: all 0.3s ease;
+  --unfocus: all 0.5s ease;
+
+  ::selection {
+    background-color: var(--secondary);
+    color: var(--accent1);
+  }
+}
+hr {
+  background-color: var(--body-contrast);
+  height: 1px;
+  border: none;
+}
+
+/* MOBILE FONT SIZES */
+.displaytext {
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  color: var(--body-contrast);
+  font-size: 64px;
+  text-transform: uppercase;
+}
+h1 {
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 500;
+  font-style: medium;
+  color: var(--body-contrast);
+  font-size: 48px;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: var(--body-contrast);
+  font-size: 32px;
+  text-transform: uppercase;
+}
+h3 {
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: var(--body-contrast);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+h3 .active {
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: var(--body-contrast);
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+p {
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--body-contrast);
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.placeholder {
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--body-contrast);
+  font-size: 16px;
+}
+
+.hyperlink {
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--secondary);
+  font-size: 16px;
+  text-decoration: underline;
+  transition: var(--unfocus);
+  margin-bottom: 0.5rem;
+}
+.hyperlink:hover {
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--body-contrast);
+  font-size: 16px;
+  transition: var(--focus);
+  cursor: pointer;
+}
+
+/* DESKTOP FONT SIZES */
+@media (min-width: 900px) {
+  .displaytext {
+    font-size: 80px;
+  }
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 48px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+
+  h3 .active {
+    font-size: 32px;
+  }
+}
+
+main {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+@media (min-width: 900px) {
+  main {
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+}

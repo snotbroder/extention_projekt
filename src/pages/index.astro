@@ -1,16 +1,258 @@
 ---
+import "../styles/generel.css";
+import MainLayout from "../layouts/MainLayout.astro";
 
+const data = await fetch(`https://plcpwtguguiponmaikkt.supabase.co/rest/v1/kongshaugTable1`, {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsY3B3dGd1Z3VpcG9ubWFpa2t0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU3ODMzNDMsImV4cCI6MjAzMTM1OTM0M30.F0THFO_2BDe8j-ZXrXcyfbczErZtlQ4nCo_MDcCMEVM",
+  },
+}).then((res) => res.json());
+console.log(data);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout sitetitle="Home">
+  <section class="herosection">
+    <div class="herotop">
+      <h1 class="displaytext">jesper</h1>
+      <div class="contentwrapper1">
+        <h3>light designer</h3>
+        <hr />
+        <h3>portfolio</h3>
+      </div>
+    </div>
+    <div class="heromiddle">
+      <div class="middle1 gradientanim">
+        <div class="contentwrapper2">
+          <h3>light designer</h3>
+          <hr />
+          <h3>portfolio</h3>
+        </div>
+      </div>
+      <div class="middle2"></div>
+    </div>
+    <div class="herobottom">
+      <h1 class="displaytext">kongs-<br />haug</h1>
+    </div>
+    <div class="arrowcontainer"><a href="#type"><img src="/arrowdown.svg" alt="arrowdown" /></a></div>
+  </section>
+
+  <section id="type" class="typecontainer">
+    <a class="typewrapper type2" href="/designs?type=Stage">
+      <img src="/proforma_800_677.avif" alt="Image of lighting setting on Hotel Proforma play" width="800" height="677" />
+      <h1>stage <br /> lighting</h1>
+    </a>
+
+    <hr class="linedesktop" />
+    <a class="typewrapper type1" href="/designs?type=Architectural">
+      <img src="/dac_1000_471.avif" alt="Image of dac exhibition" width="1000" height="471" />
+      <h1>architec&shy;tural lighting</h1>
+    </a>
+  </section>
+</MainLayout>
+
+<style></style>
+
+<style>
+  /* ----- herosection ----- */
+  .herosection {
+    /* margin-left: -1rem;
+    margin-right: -1rem; */
+
+    padding: 1rem 0.5rem 5rem 0.5rem;
+    transition: var(--focus);
+  }
+
+  .herobottom {
+    text-align: right;
+  }
+  .middle1,
+  .middle2 {
+    position: relative;
+    height: 10rem;
+    border: 2px var(--body-contrast) solid;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 5rem;
+    border-radius: 2px;
+    border
+  }
+
+  .middle1 {
+    z-index: 10;
+    background-color: var(--brandbackground);
+  }
+  .middle2 {
+    top: -8rem;
+    left: 3rem;
+  }
+  .heromiddle {
+    height: 12rem;
+  }
+  .heromiddle hr {
+    max-width: 6rem;
+    margin: 0.5rem 0 0.5rem 0;
+    border: 1px var(--body-contrast) solid;
+  }
+
+  .arrowcontainer {
+position: relative;
+    margin: auto;
+    margin-top: 2rem;
+    width: 4rem;
+    z-index: 30;
+
+
+  }
+  .arrowcontainer img{
+    position: absolute;
+        transition: var(--unfocus);
+  }
+
+  .arrowcontainer:hover img {
+   padding-top: 1rem;
+   padding-bottom: -1rem;
+
+transition: var(--focus);
+  }
+
+  /* ----- type choice ----- */
+  #type {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  #type img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-bottom: 1.5px var(--body-contrast) solid;
+    border-top: 1.5px var(--body-contrast) solid;
+  }
+  .typewrapper {
+    display: grid;
+    text-decoration: none;
+  }
+  .typewrapper img,
+  h1 {
+    grid-area: 1/1;
+  }
+  .typewrapper h1 {
+    padding: 0.5rem;
+    font-weight: 600;
+  }
+
+  .type2 {
+    text-align: right;
+  }
+  .type2 h1 {
+    margin-top: auto;
+  }
+  .typewrapper h1 {
+    z-index: 20;
+  }
+  .contentwrapper1 {
+    display: none;
+  }
+  .contentwrapper2 {
+    display: inherit;
+  }
+
+  /* Desktop */
+  @media (min-width: 900px) {
+    #type {
+      margin-left: -96px;
+      margin-right: -96px;
+    }
+    .typecontainer {
+      display: grid;
+      grid-template-columns: 10fr 0.1% 10fr;
+      transition: var(--unfocus);
+      overflow: hidden;
+    }
+
+    .linedesktop {
+      border: solid 1.5px var(--body-contrast);
+    }
+    .typewrapper img {
+      transition: var(--unfocus);
+      filter: brightness(1);
+    }
+    .typewrapper:hover img {
+      filter: brightness(0.8);
+      transition: var(--focus);
+    }
+    .typewrapper:active h1 {
+      transition: var(--focus);
+      color: var(--secondary);
+    }
+
+    .type2 h1 {
+      margin: 0;
+    }
+    .type1 h1 {
+      text-align: right;
+      margin-top: auto;
+      margin-bottom: 5rem;
+    }
+    .arrowcontainer {
+
+    margin-top: -2rem;
+  }
+
+  @media (min-width: 900px) {
+    .displaytext {
+      font-size: 104px;
+      max-width: 75rem;
+      transition: var(--focus);
+    }
+    h3 {
+      font-size: 24px;
+    }
+    .herotop {
+      z-index: 10;
+    }
+    .herosection {
+      margin-left: 6rem;
+      margin-right: 6rem;
+
+      padding-top: 0;
+      transition: var(--focus);
+    }
+    .heromiddle {
+      position: relative;
+      top: -5rem;
+      margin-left: 7rem;
+      margin-right: 7rem;
+      max-width: 60rem;
+      z-index: -10;
+      transition: var(--focus);
+    }
+    .middle1,
+    .middle2 {
+      height: 25rem;
+    }
+
+    .middle2 {
+      top: -22rem;
+      left: 4rem;
+    }
+    .herobottom {
+      position:;
+
+      z-index: 20;
+    }
+    .contentwrapper1 {
+      display: flex;
+      gap: 1rem;
+    }
+    .contentwrapper1 hr {
+      margin: 0.5rem 0 0.5rem 0;
+    }
+    .contentwrapper2 {
+      display: none;
+    }
+    .arrowcontainer {
+      position: relative;
+      top: -3rem;
+    }
+  }
+</style>
