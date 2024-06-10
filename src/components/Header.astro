@@ -54,7 +54,7 @@ import Dropdown from "../components/Dropdown.astro";
 }
 /*navigationsbar*/
 .navbar {
-  min-height: 70px;
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,6 +63,9 @@ import Dropdown from "../components/Dropdown.astro";
 }
 header{
     border-bottom: var(--body-contrast) solid 1px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 /*menuknapperne i navigationsbar*/
 .nav-menu {
@@ -70,6 +73,7 @@ header{
   justify-content: space-around;
   gap: 2rem; 
 list-style: none;
+
 
 }
 .nav-link,p{
@@ -141,7 +145,7 @@ transition: var(--unfocus);
   .nav-menu {
     position: absolute;
     left: -100%;
-    top: 14.9ch;
+    top: 5.15rem;
     gap: 2;
     flex-direction: column;
     background: var(--header-gradient);
