@@ -1,0 +1,85 @@
+---
+import "../styles/generel.css";
+import NewCard from "./NewCard.astro";
+
+import ButtonSecondary from "./ButtonSecondary.astro";
+---
+
+<section id="arch">
+  <h1>architectural designs</h1>
+
+  <div class="grid1">
+    <div class="box about">
+      <h3>featured projects</h3>
+      <p>These designs give insight in my architectural projects, starting 2008.</p>
+    </div>
+    <a href="" class="box"><NewCard year="2020" img="/tivoli1_1200_735.webp" title="tivoli corner" /></a>
+    <a href="" class="box"><NewCard year="2013" img="/aqua1_1200_800.webp" title="national danish aquarium" /></a>
+    <a href="" class="box"><NewCard year="2008" img="https://www.jesperkongshaug.com/images/60_image.jpg" title="the royal playhouse" /></a>
+    <a href="" class="box"><NewCard year="2012" img="/plan1_1200_674.webp" title="copenhagen planitarium" /></a>
+    <a href="" class="box"><NewCard year="2019" img="https://www.jesperkongshaug.com/images/215_image.jpg" title="olympic headquarters" /></a>
+  </div>
+
+  <div class="fade">
+    <ButtonSecondary target="" href="/" buttonTitle="SEE MORE" />
+  </div>
+  <hr />
+</section>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    text-align: center;
+    margin: 1rem;
+  }
+  .grid1 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin: 1rem 0 2rem 0;
+  }
+
+  .box {
+    aspect-ratio: 1/1;
+
+    border-radius: 2px;
+    border: 2px var(--body-contrast) solid;
+    transition: var(--unfocus);
+  }
+
+  .box:hover {
+    transition: var(--focus);
+  }
+  .about {
+    background: var(--header-gradient);
+  }
+
+  .fade {
+    position: relative;
+    top: -10rem;
+    height: 10rem;
+    background: var(--fade-gradient);
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-bottom: 1px var(--body-contrast) solid;
+  }
+
+  @media (min-width: 900px) {
+    .grid1 {
+      gap: 3rem;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    .fade {
+      margin-left: -6rem;
+      margin-right: -6rem;
+    }
+    .about {
+      padding: 2rem;
+    }
+  }
+</style>

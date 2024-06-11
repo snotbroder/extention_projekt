@@ -1,0 +1,88 @@
+---
+import "../styles/generel.css";
+import NewCard from "./NewCard.astro";
+
+import ButtonSecondary from "./ButtonSecondary.astro";
+---
+
+<section id="stg">
+  <h1 id="">stage designs</h1>
+
+  <div class="grid1">
+    <a href="" class="box"><NewCard year="2022" img="https://www.jesperkongshaug.com/images/213_image.jpg" title="blixen" /></a>
+    <a href="" class="box"><NewCard year="2020" img="https://www.jesperkongshaug.com/images/163_image.jpg" title="Mozart - Idomeneo" /></a>
+    <div class="box about">
+      <h3>featured projects</h3>
+      <p>These are my stage designs, that I have created the past decades.</p>
+    </div>
+    <a href="" class="box"><NewCard year="2013" img="https://www.jesperkongshaug.com/images/148_image.jpg" title="miss saigon" /></a>
+    <a href="" class="box"><NewCard year="2021" img="https://voorde.dk/kea/10_eksamen/media/images/stage/7_1200.webp" title="Operation ORFEO" /></a>
+    <a href="" class="box"><NewCard year="2024" img="https://voorde.dk/kea/10_eksamen/media/images/stage/2_1200.webp" title="Flammenwerfer" /></a>
+  </div>
+
+  <div class="fade">
+    <ButtonSecondary target="" href="/" buttonTitle="SEE MORE" />
+  </div>
+  <hr />
+</section>
+
+<style>
+  .test {
+    height: 5rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    text-align: center;
+    margin: 1rem;
+  }
+  .grid1 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin: 1rem 0 2rem 0;
+  }
+
+  .box {
+    aspect-ratio: 1/1;
+
+    border-radius: 2px;
+    border: 2px var(--body-contrast) solid;
+    transition: var(--unfocus);
+  }
+
+  .box:hover {
+    transition: var(--focus);
+  }
+  .about {
+    background: var(--header-gradient);
+  }
+
+  .fade {
+    position: relative;
+    top: -10rem;
+    height: 10rem;
+    background: var(--fade-gradient);
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-bottom: 1px var(--body-contrast) solid;
+  }
+
+  @media (min-width: 900px) {
+    .grid1 {
+      gap: 3rem;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    .fade {
+      margin-left: -6rem;
+      margin-right: -6rem;
+    }
+    .about {
+      padding: 2rem;
+    }
+  }
+</style>
