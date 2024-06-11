@@ -6,13 +6,13 @@ import Dropdown from "../components/Dropdown.astro";
 
 <header>
     <nav class="navbar">
-        <a href="/"><img class="nav-branding" src="/faviconn.svg" alt="logo"></a>
+        <a class="logo" href="/"><img class="nav-branding" src="/faviconn.svg" alt="logo"></a>
         <ul class="nav-menu">
             <li class="nav-item"><a href="/" class="nav-link hidedesktop">HOME</a></li>
            <hr>
          
                 <!-- <a href="#type" class="nav-link">PORTFOLIO</a> -->
-                <Dropdown header="PORTFOLIO" underknap1="STAGE LIGHTING" underknap2="ARCHITECTURAL LIGHTING"></Dropdown> 
+                <Dropdown header="DESIGNS" underknap1="STAGE DESIGNS" underknap2="ARCHITECTURAL DESIGNS"></Dropdown> 
          
             <hr>
             <li class="nav-item"><p><a href="/cv" class="nav-link">CV 
@@ -32,6 +32,8 @@ import Dropdown from "../components/Dropdown.astro";
 
 
 <style>
+
+
     /*----------menu-------------*/
 
     /* kun på comp */
@@ -60,6 +62,7 @@ import Dropdown from "../components/Dropdown.astro";
   align-items: center;
   padding: 1.5rem;
   background: var(--header-gradient);
+
 }
 header{
     border-bottom: var(--body-contrast) solid 1px;
