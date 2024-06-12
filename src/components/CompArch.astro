@@ -6,7 +6,11 @@ import ButtonSecondary from "./ButtonSecondary.astro";
 ---
 
 <section id="arch">
-  <h1>architectural designs</h1>
+  <div class="breadcrumbcontainer">
+    <div class="breadcrumb">
+      <h2>architectural designs</h2>
+    </div>
+  </div>
 
   <div class="grid1">
     <div class="box about gradientanim">
@@ -27,9 +31,23 @@ import ButtonSecondary from "./ButtonSecondary.astro";
 </section>
 
 <style>
-  h1 {
+  h2 {
     position: sticky;
     top: 5rem;
+  }
+  .breadcrumbcontainer {
+    position: sticky;
+    top: 5.04rem;
+    z-index: 50;
+    height: 6rem;
+    margin-bottom: 2rem;
+  }
+  .breadcrumb {
+    max-width: fit-content;
+    border: solid var(--body-contrast) 1px;
+    border-top: none;
+    padding: 1rem;
+    background: var(--footer-gradient);
   }
   a {
     text-decoration: none;

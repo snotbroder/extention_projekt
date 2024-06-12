@@ -6,8 +6,11 @@ import ButtonSecondary from "./ButtonSecondary.astro";
 ---
 
 <section id="stg">
-  <h1 id="">stage designs</h1>
-
+  <div class="breadcrumbcontainer">
+    <div class="breadcrumb">
+      <h2>stage designs</h2>
+    </div>
+  </div>
   <div class="grid1">
     <a href="/designs/blixen/" class="box"><NewCard year="2022" img="https://www.jesperkongshaug.com/images/213_image.jpg" title="blixen" /></a>
     <div class="box about gradientanim">
@@ -27,9 +30,22 @@ import ButtonSecondary from "./ButtonSecondary.astro";
 </section>
 
 <style>
-  h1 {
+  h2 {
     position: sticky;
     top: 5rem;
+  }
+  .breadcrumbcontainer {
+    position: sticky;
+    top: 5.04rem;
+    z-index: 50;
+    height: 6rem;
+  }
+  .breadcrumb {
+    max-width: fit-content;
+    border: solid var(--body-contrast) 1px;
+    border-top: none;
+    padding: 1rem;
+    background: var(--footer-gradient);
   }
 
   a {
