@@ -1,5 +1,5 @@
 ---
-import Card from "../../components/Card.astro";
+import NewDBcard from "../../components/NewDBcard.astro";
 import "../../styles/generel.css";
 import "../../styles/animations.css";
 import MainLayout from "../../layouts/MainLayout.astro";
@@ -52,13 +52,28 @@ console.log(data);
       data
         .sort((a, b) => b.year - a.year) //sortering
         .map((data) => {
-        if (data.year == 2024 || data.year == 2022 || data.year == 2021 || data.year == 2020 || data.year == 2019  ) return <Card name="recent" data={data} />;
+        if (data.year == 2024 || data.year == 2022 || data.year == 2021 || data.year == 2020 || data.year == 2019  ) return <NewDBcard name="recent" data={data} />;
 
       })
     }
   </section>
 </MainLayout>
 
+<style>
+  .liste {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  margin: 1rem 0 2rem 0;
+}
+
+@media (min-width: 900px) {
+  .liste {
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+}</style>
 <style>
 .breadcrumbcontainer{
   position: sticky;
@@ -104,12 +119,7 @@ console.log(data);
 </script>
 
 <style>
-  .liste {
-    scroll-snap-type: y mandatory;
-    /* prøver at minimere whitespace */
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
+
   .flex {
     display: flex;
     flex-wrap: wrap;

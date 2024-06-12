@@ -1,5 +1,5 @@
 ---
-import Card from "../../components/Card.astro";
+import NewDBcard from "../../components/NewDBcard.astro";
 import "../../styles/generel.css";
 import "../../styles/animations.css";
 import MainLayout from "../../layouts/MainLayout.astro";
@@ -52,7 +52,7 @@ console.log(data);
       data
       .sort((a, b) => a.title.localeCompare(b.title)) //alfabetisk sortering
         .map((data) => {
-        if (data ) return <Card name="recent" data={data} />;
+        if (data ) return <NewDBcard name="recent" data={data} />;
 
       })
     }
@@ -60,6 +60,21 @@ console.log(data);
 </MainLayout>
 
 <style>
+
+.liste {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin: 1rem 0 2rem 0;
+  }
+
+  @media (min-width: 900px) {
+    .liste {
+      gap: 3rem;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+
+  }
 .breadcrumbcontainer{
   position: sticky;
   top: 0%;
@@ -104,12 +119,7 @@ console.log(data);
 </script>
 
 <style>
-  .liste {
-    scroll-snap-type: y mandatory;
-    /* prøver at minimere whitespace */
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
+
   .flex {
     display: flex;
     flex-wrap: wrap;
