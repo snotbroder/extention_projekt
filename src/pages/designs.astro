@@ -6,6 +6,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 
 
+
+
 const data = await fetch(`https://plcpwtguguiponmaikkt.supabase.co/rest/v1/kongshaugTable1`, {
   method: "GET",
   headers: {
@@ -15,11 +17,11 @@ const data = await fetch(`https://plcpwtguguiponmaikkt.supabase.co/rest/v1/kongs
 console.log(data);
 ---
 
-<MainLayout sitetitle= "Designs">
+  <MainLayout sitetitle= "Designs">
 
   <div class="breadcrumbcontainer">
   <p class="breadcrumb"><a class="hyperlink" href="/">Home</a> <img src="/breadcrumb_arrow.svg" alt="breadcrumbarrow">  <span class="placeholder breadcrumbtext">PLACEHOLDER</span></p>
-</div>
+    </div>
   <div class="titlecontainer">
     <h1 id="header_arc"> </h1>
     <h1 id="header_stg"></h1>
@@ -49,15 +51,20 @@ console.log(data);
       })
     }
   </section>
-</MainLayout>
+  </MainLayout>
 
 <style>
+.test{
+  z-index: -1000;
+  background-image: url(/profilbillede.avif);
+}
 
 .liste {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     margin: 1rem 0 2rem 0;
+
   }
 
   @media (min-width: 900px) {

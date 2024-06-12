@@ -30,7 +30,7 @@ const { title, year, img, link, data } = Astro.props;
     object-fit: cover;
     border-radius: 2px;
     transition: var(--unfocus);
-    z-index: 10;
+    z-index: -1;
     transform: translateX(0.5rem) translateY(0.5rem);
   }
   .overlay {
@@ -40,7 +40,7 @@ const { title, year, img, link, data } = Astro.props;
     background-color: var(--primary-35);
     border-radius: 1px;
     overflow: hidden;
-    z-index: 10;
+    z-index: 1s;
     width: 100%;
   }
   a:hover .overlay {
@@ -69,9 +69,9 @@ const { title, year, img, link, data } = Astro.props;
 
   .box {
     border-radius: 2px;
-    border: 2px var(--body-contrast) solid;
+    border: 1px var(--body-contrast) solid;
     transition: var(--unfocus);
-    z-index: 1;
+    aspect-ratio: 1/1;
   }
 
   .box:hover {
