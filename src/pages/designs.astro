@@ -1,5 +1,5 @@
 ---
-import Card from "../components/Card.astro";
+import NewDBcard from "../components/NewDBcard.astro";
 import "../styles/generel.css";
 import "../styles/animations.css";
 import MainLayout from "../layouts/MainLayout.astro";
@@ -44,14 +44,29 @@ console.log(data);
   <section class="liste ">
     {
       data.map((data) => {
-        if (data.type == "Architectural") return <Card name="arc" data={data} />;
-        if (data.type == "Stage") return <Card name="stg" data={data} />;
+        if (data.type == "Architectural") return <NewDBcard name="arc" data={data} />;
+        if (data.type == "Stage") return <NewDBcard name="stg" data={data} />;
       })
     }
   </section>
 </MainLayout>
 
 <style>
+
+.liste {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin: 1rem 0 2rem 0;
+  }
+
+  @media (min-width: 900px) {
+    .liste {
+      gap: 3rem;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+
+  }
 .breadcrumbcontainer{
   position: sticky;
   top: 0%;

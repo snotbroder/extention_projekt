@@ -1,24 +1,25 @@
 ---
 import "../styles/generel.css";
-const { title, year, img, link } = Astro.props;
+const { title, year, img, link, data } = Astro.props;
 ---
 
-<article>
-  <img src={img} alt="" />
+<a class="box" href={`/designs/${data.slug}`} name={data.type} name={data.year}>
+  <img src={data.image} alt={data.image_text} />
   <div class="overlay">
     <div class="items">
-      <h3>{title}</h3>
+      <h3>{data.title}</h3>
       <hr />
-      <p>{year}</p>
+      <p>{data.year} | {data.type} design | {data.location} | <span class="hyperlink">Read more . . .</span></p>
     </div>
   </div>
-</article>
+</a>
 
 <style>
-  article {
+  a {
     display: grid;
     place-items: center;
-    z-index: 1;
+
+    text-decoration: none;
   }
   img,
   .overlay {
@@ -29,7 +30,7 @@ const { title, year, img, link } = Astro.props;
     object-fit: cover;
     border-radius: 2px;
     transition: var(--unfocus);
-    z-index: -1;
+    z-index: 10;
     transform: translateX(0.5rem) translateY(0.5rem);
   }
   .overlay {
@@ -42,11 +43,11 @@ const { title, year, img, link } = Astro.props;
     z-index: 10;
     width: 100%;
   }
-  article:hover .overlay {
+  a:hover .overlay {
     opacity: 1;
     transition: var(--focus);
   }
-  article:hover img {
+  a:hover img {
     /* filter: blur(2px); */
     transform: translateX(0) translateY(0);
     transition: var(--focus);
@@ -64,6 +65,17 @@ const { title, year, img, link } = Astro.props;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     text-align: end;
+  }
+
+  .box {
+    border-radius: 2px;
+    border: 2px var(--body-contrast) solid;
+    transition: var(--unfocus);
+    z-index: 1;
+  }
+
+  .box:hover {
+    transition: var(--focus);
   }
 
   @media (min-width: 900px) {
