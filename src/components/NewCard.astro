@@ -18,6 +18,7 @@ const { title, year, img, link } = Astro.props;
   article {
     display: grid;
     place-items: center;
+    z-index: 1;
   }
   img,
   .overlay {
@@ -28,7 +29,7 @@ const { title, year, img, link } = Astro.props;
     object-fit: cover;
     border-radius: 2px;
     transition: var(--unfocus);
-    z-index: -20;
+    z-index: -1;
     transform: translateX(0.5rem) translateY(0.5rem);
   }
   .overlay {

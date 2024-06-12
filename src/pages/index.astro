@@ -3,6 +3,8 @@ import "../styles/generel.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import CompArch from "../components/CompArch.astro";
 import CompStg from "../components/CompStg.astro";
+import CompCv from "../components/CompCv.astro";
+
 
 
 const data = await fetch(`https://plcpwtguguiponmaikkt.supabase.co/rest/v1/kongshaugTable1`, {
@@ -52,17 +54,22 @@ console.log(data);
       <h1>architec&shy;tural designs</h1>
     </a>
   </section>
-<CompArch></CompArch>
-<CompStg></CompStg>
 
-<div class="content">
+    <CompArch></CompArch>
+
+    <CompStg></CompStg>
+
+    <CompCv></CompCv>
+
+
+<!-- <div class="content">
   <div class="target hidden">I am a target div!</div>
-</div>
+</div> -->
 
 
 
 </MainLayout>
-<style> .hidden {
+<!-- <style> .hidden {
   opacity: 0;
   transition: opacity 1s;
 }
@@ -98,7 +105,9 @@ console.log(data);
 
             observer.observe(target);
         });
-</script>
+</script> -->
+
+
 <!-- /designs?type=Stage -->
 <!-- /designs?type=Architectural -->
 
