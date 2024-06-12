@@ -163,6 +163,9 @@ import CVcomponent from "./CVcomponent.astro";
     color: var(--body-contrast);
     font-size: 32px;
   }
+  #profilepic {
+    border-bottom: 1px var(--body-contrast) solid;
+  }
 
   /* desktop */
   @media (min-width: 900px) {
@@ -170,6 +173,7 @@ import CVcomponent from "./CVcomponent.astro";
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
+      margin-left: -6rem;
     }
 
     #grid_3-3-3 {
@@ -187,7 +191,9 @@ import CVcomponent from "./CVcomponent.astro";
     #profilepic {
       object-fit: cover;
       width: 100%;
-      aspect-ratio: 1/1.5;
+      aspect-ratio: 1/1;
+
+      border-right: 1px var(--body-contrast) solid;
     }
 
     #profiletext {
