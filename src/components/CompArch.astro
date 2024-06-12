@@ -9,7 +9,7 @@ import ButtonSecondary from "./ButtonSecondary.astro";
   <h1>architectural designs</h1>
 
   <div class="grid1">
-    <div class="box about">
+    <div class="box about gradientanim">
       <h3>featured projects</h3>
       <p>These designs give insight in my architectural projects, starting 2008.</p>
     </div>
@@ -27,6 +27,10 @@ import ButtonSecondary from "./ButtonSecondary.astro";
 </section>
 
 <style>
+  h1 {
+    position: sticky;
+    top: 5rem;
+  }
   a {
     text-decoration: none;
   }
@@ -54,6 +58,11 @@ import ButtonSecondary from "./ButtonSecondary.astro";
   }
   .about {
     background: var(--header-gradient);
+    transition: var(--unfocus);
+  }
+  .about:hover {
+    background: var(--footer-gradient);
+    transition: var(--focus);
   }
 
   .fade {

@@ -3,97 +3,98 @@ import "../styles/generel.css";
 import CVcomponent from "./CVcomponent.astro";
 ---
 
-<article id="cv" class="grid_2-2">
-  <div id="profile">
-    <img id="profilepic" src="/profilbillede.avif" alt="Jesper Kongshaug holding lights" width="2000" height="1333" />
-    <p id="courtesy">Courtesy of Ritzau</p>
-  </div>
-  <div id="profiletext">
-    <div class="overhead">
-      <h1 class="">about Jesper Kongshaug</h1>
+<section id="cv">
+  <article class="grid_2-2">
+    <div id="profile">
+      <img id="profilepic" src="/profilbillede.avif" alt="Jesper Kongshaug holding lights" width="2000" height="1333" />
+      <p id="courtesy">Courtesy of Ritzau</p>
     </div>
-    <div>
-      <h3>Profile</h3>
-      <p>Jesper Kongshaug is an award-winning lighting designer who works, researches, and teaches internationally in the fields of performing arts, light art, architecture, and lighting technology.</p>
-      <p>“Kongshaug is one of Denmark’s foremost lighting designers. The majority of his work has been associated with opera on an international level. Kongshaug's work is of high artistic quality, innovative, experimental, yet also very clear and assured in his solutions. He created a 14 km light art installation 'Winter Light' when Copenhagen was the European Capital of Culture in 1996.” (Gyldendal's Encyclopedia)</p>
-      <p>Jesper Kongshaug teaches and lectures at several leading cultural institutions worldwide. He develops and advises on architectural lighting for many of the country’s leading architectural firms.</p>
-      <a target="_blank" class="hyperlink" href="https://www.operabase.com/jesper-kongshaug-a8270/da">Read more on Operabase&#x2197;</a>
+    <div id="profiletext">
+      <div class="overhead">
+        <h1 class="">about Jesper Kongshaug</h1>
+      </div>
+      <div>
+        <h3>Profile</h3>
+        <p>Jesper Kongshaug is an award-winning lighting designer who works, researches, and teaches internationally in the fields of performing arts, light art, architecture, and lighting technology.</p>
+        <p>“Kongshaug is one of Denmark’s foremost lighting designers. The majority of his work has been associated with opera on an international level. Kongshaug's work is of high artistic quality, innovative, experimental, yet also very clear and assured in his solutions. He created a 14 km light art installation 'Winter Light' when Copenhagen was the European Capital of Culture in 1996.” (Gyldendal's Encyclopedia)</p>
+        <p>Jesper Kongshaug teaches and lectures at several leading cultural institutions worldwide. He develops and advises on architectural lighting for many of the country’s leading architectural firms.</p>
+        <a target="_blank" class="hyperlink" href="https://www.operabase.com/jesper-kongshaug-a8270/da">Read more on Operabase&#x2197;</a>
+      </div>
+      <div>
+        <h3>Education</h3>
+        <ul>
+          <li>Niels Brock Business School (1974-75)</li>
+          <li>Technical University of Denmark, Lundtofte (1974-76)</li>
+          <li>University of Arizona, Tucson - Performance Studies (1976-78)</li>
+        </ul>
+      </div>
     </div>
+  </article>
+  <hr class="line" />
+  <article id="grid_3-3-3">
     <div>
-      <h3>Education</h3>
+      <h3>NOTABLE POSITIONS</h3>
       <ul>
-        <li>Niels Brock Business School (1974-75)</li>
-        <li>Technical University of Denmark, Lundtofte (1974-76)</li>
-        <li>University of Arizona, Tucson - Performance Studies (1976-78)</li>
+        <li><b>Tivoli Gardens</b> Head of Lights | 2015 - present day</li>
+        <li><b>Copenhagen Light Festival</b> boardmember and curator | 2019 - present day</li>
+        <li>Light designer at <b>The Royal Opera</b> | 1995 - present day</li>
+        <li>Membership of the following organisations: Sammenslutningen af Danske Scenografer, ESTA and USITT meber</li>
       </ul>
     </div>
-  </div>
-</article>
-<hr class="line" />
-<article id="grid_3-3-3">
-  <div>
-    <h3>NOTABLE POSITIONS</h3>
-    <ul>
-      <li><b>Tivoli Gardens</b> Head of Lights | 2015 - present day</li>
-      <li><b>Copenhagen Light Festival</b> boardmember and curator | 2019 - present day</li>
-      <li>Light designer at <b>The Royal Opera</b> | 1995 - present day</li>
-      <li>Membership of the following organisations: Sammenslutningen af Danske Scenografer, ESTA and USITT meber</li>
-    </ul>
-  </div>
-  <hr />
-  <div id="center" class="">
-    <h3>SOFTWARE</h3>
-    <ul>
-      <li>AutoCAD</li>
-      <li>VectorWorks</li>
-      <li>ESP Vision</li>
-      <li>DIAlux</li>
-      <li>GrandMA</li>
-    </ul>
-  </div>
-  <hr />
-  <div>
-    <h3 id="head2">UPCOMING WORK</h3>
-    <ul>
-      <li>Flammenwerfer, Det Kongelige Teater Copenhagen - AUTUMN 2024 | <a class="hyperlink" href="https://kglteater.dk/det-sker/sason-20242025/ekstern-arrangor/flammenwerfer">Read more&#x2197;</a></li>
-      <li>New stage show, Aveny-X Greenland - SUMMER 2024 | <a class="hyperlink" href="https://nextzonemoves.dk/en/performances">Read more&#x2197;</a></li>
-      <li>Vandkulturhuset, Copenhagen - AUTUMN 2024 | <a class="hyperlink" href="https://papiroeen.dk/vandkultur/">Read more&#x2197;</a></li>
-    </ul>
-  </div>
-</article>
+    <hr />
+    <div id="center" class="">
+      <h3>SOFTWARE</h3>
+      <ul>
+        <li>AutoCAD</li>
+        <li>VectorWorks</li>
+        <li>ESP Vision</li>
+        <li>DIAlux</li>
+        <li>GrandMA</li>
+      </ul>
+    </div>
+    <hr />
+    <div>
+      <h3 id="head2">UPCOMING WORK</h3>
+      <ul>
+        <li>Flammenwerfer, Det Kongelige Teater Copenhagen - AUTUMN 2024 | <a class="hyperlink" href="https://kglteater.dk/det-sker/sason-20242025/ekstern-arrangor/flammenwerfer">Read more&#x2197;</a></li>
+        <li>New stage show, Aveny-X Greenland - SUMMER 2024 | <a class="hyperlink" href="https://nextzonemoves.dk/en/performances">Read more&#x2197;</a></li>
+        <li>Vandkulturhuset, Copenhagen - AUTUMN 2024 | <a class="hyperlink" href="https://papiroeen.dk/vandkultur/">Read more&#x2197;</a></li>
+      </ul>
+    </div>
+  </article>
 
-<hr class="line" />
-<article id="section3">
-  <h2 id="head3">CURRICULUM</h2>
+  <hr class="line" />
+  <article id="section3">
+    <h2 id="head3">CURRICULUM</h2>
 
-  <div class="flex">
-    <button class="selected" id="stgbutton"> <h3>STAGE LIGHTING</h3></button>
-    <span class="line">|</span>
-    <button id="archibutton"><h3>ARCHITECTURAL LIGHTING</h3></button>
+    <div class="flex">
+      <button class="selected" id="stgbutton"> <h3>STAGE LIGHTING</h3></button>
+      <span class="line">|</span>
+      <button id="archibutton"><h3>ARCHITECTURAL LIGHTING</h3></button>
+    </div>
+  </article>
+
+  <div class="cvStage">
+    <CVcomponent orientation="odd" year="2024" work1="Flammenwerfer, The Royal Theater, 2024" work2="Drot & Maqrsk, The Royal Theater, 2024" work3="Aveny-X performancens, Next Zone Moves, 2024" />
+    <CVcomponent orientation="" year="2022" work1="Blixen, The Royal Theater, 2022" work2="Pelléas et Mélisande, Hungarian State Opera, 2022" work3="Lohengrin, Deutsche Oper Berlin, 2022" />
+    <CVcomponent orientation="odd" year="2020" work1="Mozart - Idomeneo, Israel Opera, 2020" work2="Björk - Vespertine, Hotel Proforma, 2020" />
+    <CVcomponent orientation="" year="2017" work1="Meistersinger, Wagner in Covent Garden, London, 2017" work2="Madame Butterfly, La Monnaie/ De Munt, 2017" work3="Eine Nacht in Venedig, Oper Graz, 2017" />
+    <CVcomponent orientation="odd" year="2014" work1="Cosmos+, Hotel Proforma, 2014" work2="Miss Saigon, Malmö Opera, 2014" work3="Mozart’s “Idomeneo” at the Vienna State Opera, 2014" />
+    <CVcomponent orientation="" year="2011" work1="Die Frau ohne Schatten, The Royal Theater, 2011" work2="Tosca, The Royal Theater, 2011" work3="War Sum Up, Hotel Proforma, 2011" work4="" />
+    <CVcomponent orientation="odd" year="2010" work1="Vertical Road, Akram Khan Dance Company U.K., 2010" work2="Mozart's “Idomeneo”, The Royal Theater, 2010" work3="Verdi's “Il Trovatore”, The Royal Theater, 2010" work4="" />
   </div>
-</article>
-
-<div class="cvStage">
-  <CVcomponent orientation="odd" year="2024" work1="Flammenwerfer, The Royal Theater, 2024" work2="Drot & Maqrsk, The Royal Theater, 2024" work3="Aveny-X performancens, Next Zone Moves, 2024" />
-  <CVcomponent orientation="" year="2022" work1="Blixen, The Royal Theater, 2022" work2="Pelléas et Mélisande, Hungarian State Opera, 2022" work3="Lohengrin, Deutsche Oper Berlin, 2022" />
-  <CVcomponent orientation="odd" year="2020" work1="Mozart - Idomeneo, Israel Opera, 2020" work2="Björk - Vespertine, Hotel Proforma, 2020" />
-  <CVcomponent orientation="" year="2017" work1="Meistersinger, Wagner in Covent Garden, London, 2017" work2="Madame Butterfly, La Monnaie/ De Munt, 2017" work3="Eine Nacht in Venedig, Oper Graz, 2017" />
-  <CVcomponent orientation="odd" year="2014" work1="Cosmos+, Hotel Proforma, 2014" work2="Miss Saigon, Malmö Opera, 2014" work3="Mozart’s “Idomeneo” at the Vienna State Opera, 2014" />
-  <CVcomponent orientation="" year="2011" work1="Die Frau ohne Schatten, The Royal Theater, 2011" work2="Tosca, The Royal Theater, 2011" work3="War Sum Up, Hotel Proforma, 2011" work4="" />
-  <CVcomponent orientation="odd" year="2010" work1="Vertical Road, Akram Khan Dance Company U.K., 2010" work2="Mozart's “Idomeneo”, The Royal Theater, 2010" work3="Verdi's “Il Trovatore”, The Royal Theater, 2010" work4="" />
-</div>
-<div class="cvArchi hidden">
-  <CVcomponent orientation="" year="2022" work1="H. C. Andersen Museum, Odense, 2022" />
-  <CVcomponent orientation="odd" year="2020" work1="Tivoli Corner, Copenhagen, 2020" />
-  <CVcomponent orientation="" year="2019" work1="IOC - The International Olympic Committee's new headquarters in Lausanne, Switzerland, 2019" work2="The new K.B. Hall, Copenhagen, 2019" work3="Amagerbakke/Copenhill, Copenhagen, 2019" />
-  <CVcomponent orientation="odd" year="2017" work1="ULC Landmark, Artist: Marlene Bach, Odense, 2017" work2="Experimentarium, Light Labyrinth, Copenhagen, 2017" work3="LEGO HOUSE, Billund, 2017" />
-  <CVcomponent year="2015" work1="Langebro, Copenhagen 2015 (Nominated for the Danish Lighting Award 2015)" work2="Kai Løvrings Plads, Odense, 2015" work3="International Criminal Court, Artist: Eske Rex, The Hague, 2015" work4="ILLUM, Copenhagen, 2015" />
-  <CVcomponent orientation="odd" year="2014" work1="Hamar Cultural Center, Norway, 2014" work2="Kings' Lapidarium, Chr. IV’s Brewery, 2014" work3="House of Architectural Heritage, Copenhagen, 2014" work4="Danish National Maritime Museum, Elsinore, 2014" />
-  <CVcomponent year="2013" work1="Kastrup Airport, Terminal 2+3, 2000-2013 (Nominated for the Danish Lighting Award 2013)" work2="The Blue Planet, Kastrup, 2013 (Nominated for the Danish Lighting Award 2013)" work3="Grønnegade Square, Odense, 2013 (Nominated for the Danish Lighting Award 2013)" />
-  <CVcomponent orientation="odd" year="2006" work1="Royal Danish Playhouse, Kvæsthusbroen, Copenhagen, 2006 (Winner of the Danish Lighting Award 2006)" work2="Højbro Square, Copenhagen, 2006 (Nominated for the Danish Lighting Award 2006)" />
-</div>
-<div class="flex1"><a target="_blank" class="hyperlink" href="https://www.operabase.com/jesper-kongshaug-a8270/da">Read more on Operabase&#x2197;</a></div>
-
+  <div class="cvArchi hidden">
+    <CVcomponent orientation="" year="2022" work1="H. C. Andersen Museum, Odense, 2022" />
+    <CVcomponent orientation="odd" year="2020" work1="Tivoli Corner, Copenhagen, 2020" />
+    <CVcomponent orientation="" year="2019" work1="IOC - The International Olympic Committee's new headquarters in Lausanne, Switzerland, 2019" work2="The new K.B. Hall, Copenhagen, 2019" work3="Amagerbakke/Copenhill, Copenhagen, 2019" />
+    <CVcomponent orientation="odd" year="2017" work1="ULC Landmark, Artist: Marlene Bach, Odense, 2017" work2="Experimentarium, Light Labyrinth, Copenhagen, 2017" work3="LEGO HOUSE, Billund, 2017" />
+    <CVcomponent year="2015" work1="Langebro, Copenhagen 2015 (Nominated for the Danish Lighting Award 2015)" work2="Kai Løvrings Plads, Odense, 2015" work3="International Criminal Court, Artist: Eske Rex, The Hague, 2015" work4="ILLUM, Copenhagen, 2015" />
+    <CVcomponent orientation="odd" year="2014" work1="Hamar Cultural Center, Norway, 2014" work2="Kings' Lapidarium, Chr. IV’s Brewery, 2014" work3="House of Architectural Heritage, Copenhagen, 2014" work4="Danish National Maritime Museum, Elsinore, 2014" />
+    <CVcomponent year="2013" work1="Kastrup Airport, Terminal 2+3, 2000-2013 (Nominated for the Danish Lighting Award 2013)" work2="The Blue Planet, Kastrup, 2013 (Nominated for the Danish Lighting Award 2013)" work3="Grønnegade Square, Odense, 2013 (Nominated for the Danish Lighting Award 2013)" />
+    <CVcomponent orientation="odd" year="2006" work1="Royal Danish Playhouse, Kvæsthusbroen, Copenhagen, 2006 (Winner of the Danish Lighting Award 2006)" work2="Højbro Square, Copenhagen, 2006 (Nominated for the Danish Lighting Award 2006)" />
+  </div>
+  <div class="flex1"><a target="_blank" class="hyperlink" href="https://www.operabase.com/jesper-kongshaug-a8270/da">Read more on Operabase&#x2197;</a></div>
+</section>
 <style>
   #profile {
     display: grid;
