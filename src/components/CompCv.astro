@@ -5,14 +5,20 @@ import CVcomponent from "./CVcomponent.astro";
 
 <div class="background"></div>
 <section id="cv">
+  <div class="breadcrumbcontainer">
+    <div class="breadcrumb">
+      <h2>about</h2>
+    </div>
+  </div>
   <article class="grid_2-2">
     <div id="profile">
       <img id="profilepic" src="/profilbillede.avif" alt="Jesper Kongshaug holding lights" width="2000" height="1333" />
       <p id="courtesy">Courtesy of Ritzau</p>
     </div>
+
     <div id="profiletext">
       <div class="overhead">
-        <h1 class="">about Jesper Kongshaug</h1>
+        <h1 class="">Jesper Kongshaug</h1>
       </div>
       <div>
         <h3>Profile</h3>
@@ -97,10 +103,24 @@ import CVcomponent from "./CVcomponent.astro";
   <div class="flex1"><a target="_blank" class="hyperlink" href="https://www.operabase.com/jesper-kongshaug-a8270/da">Read more on Operabase&#x2197;</a></div>
 </section>
 <style>
+  .breadcrumbcontainer {
+    position: sticky;
+    top: 5.04rem;
+    z-index: 210;
+    height: 6rem;
+  }
+  .breadcrumb {
+    max-width: fit-content;
+    border: solid var(--body-contrast) 1px;
+    border-top: none;
+    padding: 1rem;
+    background: var(--footer-gradient);
+  }
   #profile {
     display: grid;
     margin-left: -1rem;
     margin-right: -1rem;
+    margin-top: -6rem;
   }
 
   #profilepic,
