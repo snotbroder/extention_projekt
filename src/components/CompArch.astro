@@ -5,6 +5,7 @@ import NewCard from "./NewCard.astro";
 import ButtonSecondary from "./ButtonSecondary.astro";
 ---
 
+<div class="background"></div>
 <section id="arch">
   <div class="breadcrumbcontainer">
     <div class="breadcrumb">
@@ -31,6 +32,15 @@ import ButtonSecondary from "./ButtonSecondary.astro";
 </section>
 
 <style>
+  .background {
+    position: absolute;
+    background: linear-gradient(274deg, rgba(15, 17, 54, 1) 0%, rgba(15, 17, 54, 1) 26%, rgba(15, 17, 54, 1) 70%, rgba(22, 33, 140, 1) 100%);
+    height: 150%;
+    width: 100%;
+    z-index: -200;
+    margin-left: -6rem;
+    margin-right: -6rem;
+  }
   h2 {
     position: sticky;
     top: 5rem;

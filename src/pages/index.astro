@@ -42,8 +42,9 @@ console.log(data);
     </div>
     <div class="arrowcontainer"><a href="#type"><img src="/arrowdown.svg" alt="arrowdown" /></a></div>
   </section>
+  <hr class="linetest">
 
-  <section id="type" class="typecontainer">
+  <!-- <section id="type" class="typecontainer">
     <a class="typewrapper type2" href="#stg">
       <img src="/proforma_800_677.avif" alt="Image of lighting setting on Hotel Proforma play" width="800" height="677" />
       <h1>stage <br /> designs</h1>
@@ -54,7 +55,7 @@ console.log(data);
       <img src="/dac_1000_471.avif" alt="Image of dac exhibition" width="1000" height="471" />
       <h1>architec&shy;tural designs</h1>
     </a>
-  </section>
+  </section> -->
 
     <CompArch></CompArch>
 
@@ -123,6 +124,13 @@ console.log(data);
 
     padding: 1rem 0.5rem 5rem 0.5rem;
     transition: var(--focus);
+    
+  }
+  .linetest{
+    border-bottom: 1px var(--body-contrast) solid;
+    margin-left: -1rem;
+    margin-right: -1rem;
+
   }
 
   .herobottom {
@@ -261,6 +269,12 @@ transition: var(--focus);
   }
 
   @media (min-width: 900px) {
+    .linetest{
+
+    margin-left: -6rem;
+    margin-right: -6rem;
+
+  }
     .displaytext {
       font-size: 104px;
       max-width: 75rem;
