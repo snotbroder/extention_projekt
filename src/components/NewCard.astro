@@ -5,6 +5,7 @@ const { title, year, img, link } = Astro.props;
 
 <article>
   <img src={img} alt="" />
+  <p class="miniTitle">{title}</p>
   <div class="overlay">
     <div class="items">
       <h3>{title}</h3>
@@ -15,12 +16,19 @@ const { title, year, img, link } = Astro.props;
 </article>
 
 <style>
+  .miniTitle {
+    margin-top: 1%;
+    margin-right: auto;
+    transition: var(--unfocus);
+    background-color: var(--secondary-35);
+  }
   article {
     display: grid;
     place-items: center;
     z-index: 1;
   }
   img,
+  p,
   .overlay {
     grid-area: 1/1;
   }
@@ -41,6 +49,8 @@ const { title, year, img, link } = Astro.props;
     overflow: hidden;
     z-index: 10;
     width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   article:hover .overlay {
     opacity: 1;
@@ -51,6 +61,10 @@ const { title, year, img, link } = Astro.props;
     transform: translateX(0) translateY(0);
     transition: var(--focus);
     filter: brightness(50%);
+  }
+  article:hover .miniTitle {
+    opacity: 0;
+    transition: var(--focus);
   }
   .items h3 {
     margin: auto;
@@ -69,6 +83,14 @@ const { title, year, img, link } = Astro.props;
   @media (min-width: 900px) {
     img {
       transform: translateX(1.5rem) translateY(1.5rem);
+    }
+    article {
+      place-items: start;
+    }
+    .miniTitle {
+      margin-right: auto;
+      transition: var(--unfocus);
+      background-color: transparent;
     }
   }
 </style>
