@@ -2,6 +2,7 @@
 import ButtonSecondary from "../components/ButtonSecondary.astro";
 ---
 
+<div class="background"></div>
 <div class="contentwrapper">
   <div class="breadcrumbcontainer">
     <div class="breadcrumb">
@@ -47,6 +48,16 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
   </div>
 </div>
 <style>
+  .background {
+    position: absolute;
+
+    background: linear-gradient(129deg, rgba(15, 17, 54, 1) 0%, rgba(15, 17, 54, 1) 26%, rgba(15, 17, 54, 1) 50%, rgba(49, 69, 78, 1) 70%, rgba(145, 218, 148, 0.6601015406162465) 90%, rgba(145, 218, 148, 1) 100%);
+    height: 660px;
+    width: 100%;
+    z-index: -200;
+    margin-left: -6rem;
+    margin-right: -6rem;
+  }
   .breadcrumbcontainer {
     position: sticky;
     top: 5.04rem;
