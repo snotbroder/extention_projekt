@@ -4,7 +4,7 @@ const { title, year, video, link } = Astro.props;
 ---
 
 <article>
-  <video muted loop autoplay src={video} type="video/mp4" width="100%"></video>
+  <video muted loop="true" autoplay src={video} width="100%"></video>
   <p class="miniTitle">{title}</p>
   <div class="overlay">
     <div class="items">
